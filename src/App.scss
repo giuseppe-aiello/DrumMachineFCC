@@ -1,0 +1,88 @@
+.App {
+  text-align: center;
+}
+
+
+.drum-machine{
+  background-color: #5d5e60;
+  width: 660px;
+  display: flex;
+  position: relative;
+  padding: 2rem;
+  border-radius: 5px;
+  outline: 5px solid #d7d6d6;
+  border-color: #d7d6d6;
+  .drum-pads{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 60%;
+    align-items: center;
+    padding: 20px;
+
+    @media (max-width: 768px) {
+      width: 100%; // Imposta la larghezza al 100% su schermi più piccoli
+    }
+
+  }
+
+  .control-container{
+    width: 40%;
+    display: inline-block;
+    vertical-align: center;
+    padding: 20px;
+
+    .display{
+      padding: 15px;
+      background-color: #8d8d92;
+      margin: 15px;
+      border-radius: 5px;
+    }
+    @media (max-width: 768px) {
+      width: 100%; // Imposta la larghezza al 100% su schermi più piccoli
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%; // Imposta la larghezza al 100% su schermi più piccoli
+  }
+}
+.drum-pad{
+  width: 100px;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #8d8d92;
+  text-align: center;
+  .name{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    width: 100%; // Imposta la larghezza al 100% su schermi più piccoli
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #36413e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+
+
+
